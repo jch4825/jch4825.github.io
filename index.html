@@ -5,91 +5,793 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="naver-site-verification" content="cb1ce5f76e01fc5a4a2a396713f9d347e915c89a" />
     <meta name="robots" content="index, follow" />
-    <title>AI Bridge: Zero-Gap Toolkit</title>
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2300c4cc'/%3E%3Ctext x='16' y='22' font-family='-apple-system,system-ui,sans-serif' font-size='18' font-weight='900' fill='white' text-anchor='middle'%3EAI%3C/text%3E%3C/svg%3E"
+    />
+    <title>AI 시대의 초등 교실 — 정책의 좌표와 교사의 다음 수순</title>
     <meta
       name="description"
-      content="초등교사를 위한 생성형 AI 수업·업무·윤리 학습 플랫폼"
+      content="대통령 발언, 인공지능 행동계획, AI 디지털 교육자료, 2022 개정 교육과정, 경남교육청 GneGPT — 초등 교실에 도착한 AI의 좌표와 교사 학습의 자리."
     />
-    <link rel="canonical" href="https://jch4825.github.io/AI_Bridge/" />
-    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://jch4825.github.io/" />
+
+    <meta property="og:type" content="article" />
     <meta property="og:url" content="https://jch4825.github.io/" />
-    <meta property="og:title" content="AI Bridge: Zero-Gap Toolkit" />
+    <meta property="og:title" content="AI 시대의 초등 교실 — 정책의 좌표와 교사의 다음 수순" />
     <meta
       property="og:description"
-      content="초등교사를 위한 생성형 AI 수업·업무·윤리 학습 플랫폼"
+      content="대통령 발언, 인공지능 행동계획, AI 디지털 교육자료, 2022 개정 교육과정, 경남교육청 GneGPT — 초등 교실에 도착한 AI의 좌표와 교사 학습의 자리."
     />
     <meta property="og:site_name" content="AI Bridge" />
     <meta property="og:locale" content="ko_KR" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&display=swap"
+    />
+
     <style>
       :root {
         color-scheme: light;
-        font-family:
-          Inter,
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          sans-serif;
-        color: #0e1318;
-        background: #f7f5fb;
+        --wall: #ffffff;
+        --ink: #0e1318;
+        --beige: #f0ebd8;
+        --indigo: #1a2151;
+        --gray-cool: #cdd5d8;
+        --wine: #722f37;
+        --cream: #f5e9c8;
+        --terracotta: #a14a1f;
+        --teal: #00c4cc;
+        --yellow: #f5d04a;
+        --muted: #6d7175;
+
+        --font-display:
+          "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+          system-ui, "Segoe UI", sans-serif;
+        --font-serif:
+          "Noto Serif KR", "Nanum Myeongjo", "Apple SD Gothic Neo", serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
       }
 
       body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 24px;
+        background: var(--wall);
+        color: var(--ink);
+        font-family: var(--font-serif);
+        font-size: 1.0625rem;
+        line-height: 1.8;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
       }
 
-      main {
-        width: min(100%, 560px);
-        border: 1px solid #e5e7eb;
-        border-radius: 16px;
-        background: #ffffff;
-        padding: 32px;
-        box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      .gallery {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 56px 20px 24px;
       }
 
-      h1 {
-        margin: 0;
-        font-size: clamp(2rem, 7vw, 3rem);
-        line-height: 1;
-        letter-spacing: 0;
+      .frame {
+        position: relative;
+        margin: 0 0 36px;
+        padding: 52px 36px 44px;
+        border-radius: 22px;
+        border: 1px solid rgba(15, 19, 24, 0.06);
+        box-shadow:
+          0 30px 60px -25px rgba(15, 19, 24, 0.14),
+          0 4px 14px rgba(15, 19, 24, 0.04);
+        overflow: hidden;
+        transition:
+          transform 0.22s cubic-bezier(0.2, 0.7, 0.2, 1),
+          box-shadow 0.22s cubic-bezier(0.2, 0.7, 0.2, 1);
       }
 
-      p {
-        margin: 18px 0 0;
-        color: #475569;
-        font-size: 1rem;
-        line-height: 1.75;
+      .frame:hover {
+        transform: translateY(-3px);
+        box-shadow:
+          0 44px 84px -28px rgba(15, 19, 24, 0.2),
+          0 8px 22px rgba(15, 19, 24, 0.06);
       }
 
-      a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 24px;
-        min-height: 44px;
-        border-radius: 12px;
-        background: #0e7490;
-        padding: 0 18px;
-        color: #ffffff;
-        font-weight: 800;
+      .frame:focus-within {
+        outline: 3px solid rgba(0, 196, 204, 0.5);
+        outline-offset: 5px;
+      }
+
+      .frame-link {
+        color: inherit;
         text-decoration: none;
       }
 
-      a:focus-visible {
-        outline: 3px solid rgba(14, 116, 144, 0.28);
-        outline-offset: 3px;
+      .frame-link::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 22px;
+        z-index: 0;
+      }
+
+      .frame-link:focus,
+      .frame-link:focus-visible {
+        outline: none;
+      }
+
+      /* Inner interactive elements stay above the full-frame overlay */
+      .inner-link,
+      .cta-button {
+        position: relative;
+        z-index: 1;
+      }
+
+      .inner-link:focus-visible,
+      .cta-button:focus-visible {
+        position: relative;
+        z-index: 2;
+      }
+
+      .kicker {
+        display: block;
+        margin: 0 0 22px;
+        font-family: var(--font-display);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        opacity: 0.55;
+      }
+
+      .frame h1,
+      .frame h2 {
+        font-family: var(--font-display);
+        letter-spacing: -0.015em;
+        margin: 0 0 18px;
+      }
+
+      .frame h1 {
+        font-size: clamp(2rem, 7.6vw, 3.2rem);
+        line-height: 1.15;
+        font-weight: 900;
+      }
+
+      .frame h2 {
+        font-size: clamp(1.4rem, 4.2vw, 1.85rem);
+        line-height: 1.3;
+        font-weight: 800;
+      }
+
+      .frame p {
+        margin: 0 0 16px;
+      }
+
+      .frame p:last-child {
+        margin-bottom: 0;
+      }
+
+      .frame ul {
+        margin: 0 0 18px;
+        padding-left: 1.25em;
+      }
+
+      .frame li {
+        margin-bottom: 8px;
+      }
+
+      .frame strong {
+        font-weight: 700;
+      }
+
+      .frame em {
+        font-style: italic;
+        opacity: 0.92;
+      }
+
+      /* ============ Hero — 잉크 블랙 ============ */
+      .frame--hero {
+        background: var(--ink);
+        color: #ffffff;
+        padding: 96px 36px 84px;
+        min-height: 380px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image:
+          radial-gradient(
+            circle at 78% 22%,
+            rgba(255, 255, 255, 0.05) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 15% 78%,
+            rgba(0, 196, 204, 0.06) 0%,
+            transparent 55%
+          );
+      }
+
+      .frame--hero h1 {
+        font-size: clamp(2.1rem, 9vw, 3.4rem);
+        line-height: 1.12;
+        max-width: 14ch;
+      }
+
+      .hero-sub {
+        max-width: 32ch;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+        line-height: 1.65;
+      }
+
+      /* ============ §1 인식 — 베이지 ============ */
+      .frame--beige {
+        background: var(--beige);
+        color: var(--indigo);
+      }
+
+      .frame--beige .quote-deco {
+        position: absolute;
+        top: -28px;
+        right: 8px;
+        font-family: var(--font-serif);
+        font-weight: 700;
+        font-size: clamp(8rem, 24vw, 14rem);
+        line-height: 1;
+        color: var(--indigo);
+        opacity: 0.1;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .frame--beige blockquote {
+        margin: 8px 0 22px;
+        padding: 0;
+        font-family: var(--font-serif);
+        font-size: clamp(1.05rem, 2.7vw, 1.2rem);
+        line-height: 1.7;
+      }
+
+      .frame--beige blockquote p {
+        margin: 0 0 12px;
+      }
+
+      .frame--beige cite {
+        display: block;
+        font-style: normal;
+        font-size: 0.85rem;
+        font-family: var(--font-display);
+        color: var(--indigo);
+        opacity: 0.7;
+      }
+
+      .frame--beige cite a {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-color: currentColor;
+      }
+
+      /* ============ §2 국가 — 인디고 ============ */
+      .frame--indigo {
+        background: var(--indigo);
+        color: var(--beige);
+        background-image: radial-gradient(
+          ellipse at 100% 0%,
+          rgba(245, 208, 74, 0.08) 0%,
+          transparent 60%
+        );
+      }
+
+      .frame--indigo .kicker {
+        color: var(--yellow);
+        opacity: 0.85;
+      }
+
+      .frame--indigo strong {
+        color: var(--cream);
+      }
+
+      .frame--indigo em {
+        font-style: normal;
+        color: var(--yellow);
+        font-weight: 700;
+      }
+
+      .bignum {
+        margin: 32px 0;
+        padding: 24px 0 0;
+        border-top: 1px solid rgba(240, 235, 216, 0.18);
+      }
+
+      .bignum-value {
+        display: block;
+        font-family: var(--font-display);
+        font-size: clamp(4rem, 16vw, 7rem);
+        font-weight: 900;
+        line-height: 0.95;
+        letter-spacing: -0.03em;
+        color: var(--yellow);
+      }
+
+      .bignum-value small {
+        font-size: 0.45em;
+        margin-left: 0.05em;
+        font-weight: 800;
+      }
+
+      .bignum-caption {
+        display: block;
+        margin-top: 10px;
+        font-family: var(--font-display);
+        font-size: 0.78rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--cream);
+        opacity: 0.75;
+      }
+
+      /* ============ §3 교육 부문 — 회청 ============ */
+      .frame--cool {
+        background: var(--gray-cool);
+        color: var(--ink);
+        background-image: radial-gradient(
+          circle at 90% 100%,
+          rgba(14, 19, 24, 0.05) 0%,
+          transparent 60%
+        );
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 26px 0;
+      }
+
+      .stat {
+        padding: 20px 18px;
+        background: rgba(255, 255, 255, 0.55);
+        border-radius: 12px;
+      }
+
+      .stat-num {
+        font-family: var(--font-display);
+        font-size: clamp(1.9rem, 6vw, 2.6rem);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        color: var(--ink);
+      }
+
+      .stat-num small {
+        font-size: 0.55em;
+        margin-left: 0.05em;
+      }
+
+      .stat-label {
+        margin-top: 8px;
+        font-family: var(--font-display);
+        font-size: 0.82rem;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
+      /* ============ §4 교육과정 — 와인 ============ */
+      .frame--wine {
+        background: var(--wine);
+        color: var(--cream);
+        background-image: radial-gradient(
+          ellipse at 0% 0%,
+          rgba(245, 233, 200, 0.08) 0%,
+          transparent 60%
+        );
+      }
+
+      .frame--wine .kicker {
+        color: var(--cream);
+        opacity: 0.65;
+      }
+
+      .frame--wine strong {
+        color: #ffffff;
+      }
+
+      .frame--wine em {
+        font-style: italic;
+        color: var(--cream);
+      }
+
+      .shift {
+        margin: 30px 0;
+        padding: 22px 18px;
+        background: rgba(0, 0, 0, 0.16);
+        border-radius: 14px;
+        text-align: center;
+      }
+
+      .shift-pair {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.45em;
+        font-family: var(--font-display);
+        font-weight: 900;
+        color: var(--cream);
+        line-height: 0.95;
+      }
+
+      .shift-from {
+        font-size: clamp(1.8rem, 6vw, 2.7rem);
+        opacity: 0.55;
+      }
+
+      .shift-arrow {
+        font-size: clamp(1.4rem, 4vw, 2rem);
+        opacity: 0.7;
+      }
+
+      .shift-to {
+        font-size: clamp(2.8rem, 10vw, 4.4rem);
+        color: #ffffff;
+      }
+
+      .shift-from small,
+      .shift-to small {
+        font-size: 0.36em;
+        font-weight: 700;
+        margin-left: 0.08em;
+      }
+
+      .shift-label {
+        margin-top: 14px;
+        font-family: var(--font-display);
+        font-size: 0.78rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--cream);
+        opacity: 0.7;
+      }
+
+      /* ============ §5 지역 — 테라코타 ============ */
+      .frame--terracotta {
+        background: var(--terracotta);
+        color: #ffffff;
+        background-image: radial-gradient(
+          circle at 0% 100%,
+          rgba(255, 255, 255, 0.06) 0%,
+          transparent 55%
+        );
+      }
+
+      .frame--terracotta .kicker {
+        color: #ffffff;
+        opacity: 0.7;
+      }
+
+      .frame--terracotta strong {
+        color: var(--cream);
+      }
+
+      .frame--terracotta em {
+        font-style: italic;
+        color: var(--cream);
+      }
+
+      .quote-end {
+        margin: 26px 0 0;
+        padding: 18px 22px 20px 26px;
+        background: rgba(255, 255, 255, 0.14);
+        border-left: 3px solid rgba(255, 255, 255, 0.55);
+        border-radius: 0 12px 12px 0;
+      }
+
+      .quote-end p {
+        margin: 0 0 8px;
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-size: 1.02rem;
+        line-height: 1.65;
+      }
+
+      .quote-end cite {
+        display: block;
+        font-style: normal;
+        font-family: var(--font-display);
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      /* ============ §6 질문 — 순백 (벽과 같음) ============ */
+      .frame--white {
+        background: #ffffff;
+        color: var(--ink);
+      }
+
+      .frame--white .emph {
+        margin-top: 22px;
+        padding: 18px 22px;
+        background: rgba(14, 19, 24, 0.045);
+        border-left: 3px solid var(--ink);
+        border-radius: 0 12px 12px 0;
+        font-weight: 500;
+      }
+
+      /* ============ §7 응답 — 캔바 틸 ============ */
+      .frame--teal {
+        background: var(--teal);
+        color: var(--ink);
+        padding: 64px 36px 56px;
+        background-image:
+          radial-gradient(
+            circle at 88% 12%,
+            rgba(255, 255, 255, 0.18) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 8% 92%,
+            rgba(14, 19, 24, 0.08) 0%,
+            transparent 55%
+          );
+      }
+
+      .frame--teal .kicker {
+        color: var(--ink);
+        opacity: 0.55;
+      }
+
+      .frame--teal .brand {
+        font-family: var(--font-display);
+        font-weight: 900;
+        color: var(--ink);
+      }
+
+      .frame--teal strong {
+        font-weight: 700;
+      }
+
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 28px;
+        min-height: 56px;
+        padding: 0 30px;
+        border-radius: 14px;
+        background: var(--ink);
+        color: #ffffff;
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: 1.08rem;
+        text-decoration: none;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease;
+        box-shadow: 0 16px 32px -8px rgba(14, 19, 24, 0.45);
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 22px 40px -8px rgba(14, 19, 24, 0.55);
+      }
+
+      .cta-button:focus-visible {
+        outline: 3px solid rgba(14, 19, 24, 0.4);
+        outline-offset: 4px;
+      }
+
+      .cta-button .arrow {
+        font-size: 1.15em;
+        line-height: 1;
+      }
+
+      /* ============ Footer ============ */
+      footer {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 36px 28px 64px;
+        font-family: var(--font-display);
+        color: var(--muted);
+        font-size: 0.8rem;
+        line-height: 1.7;
+      }
+
+      footer p {
+        margin: 0 0 6px;
+      }
+
+      footer a {
+        color: var(--muted);
+        text-decoration: underline;
+        text-decoration-color: rgba(109, 113, 117, 0.4);
+        text-underline-offset: 3px;
+      }
+
+      footer a:hover {
+        color: var(--ink);
+      }
+
+      /* ============ Responsive ============ */
+      @media (min-width: 720px) {
+        .gallery {
+          padding: 88px 32px 32px;
+        }
+        .frame {
+          margin-bottom: 56px;
+          padding: 64px 56px 56px;
+        }
+        .frame--hero {
+          padding: 120px 56px 100px;
+          min-height: 460px;
+        }
+        .frame--teal {
+          padding: 80px 56px 72px;
+        }
+        .bignum-value {
+          font-size: clamp(5rem, 10vw, 7.5rem);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery {
+          padding: 36px 14px 16px;
+        }
+        .frame {
+          padding: 40px 24px 36px;
+          border-radius: 18px;
+        }
+        .frame-link::after {
+          border-radius: 18px;
+        }
+        .frame--hero {
+          padding: 72px 24px 60px;
+          min-height: 320px;
+        }
+        .frame--teal {
+          padding: 56px 24px 52px;
+        }
+        .stats {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
   <body>
-    <main>
-      <h1>AI Bridge</h1>
-      <p>초등교사를 위한 생성형 AI 활용 학습 플랫폼입니다.</p>
-      <a href="/AI_Bridge/">AI Bridge 열기</a>
+    <main class="gallery">
+      <header class="frame frame--hero">
+        <h1><a class="frame-link" href="/AI_Bridge/">AI는 이미 교실의 다음 도구입니다.</a></h1>
+        <p class="hero-sub">
+          정부·교육과정·시·도교육청이 같은 방향으로 움직이는 지금,<br />
+          초등교사의 학습은 어디에 있을까요.
+        </p>
+      </header>
+
+      <section class="frame frame--beige">
+        <span class="quote-deco" aria-hidden="true">&ldquo;</span>
+        <span class="kicker">01 · 인식</span>
+        <h2><a class="frame-link" href="/AI_Bridge/">AI는 계산기다 — 대통령의 정의</a></h2>
+        <blockquote>
+          <p>"이제는 앞으로 인공지능이라고 하는 게 결국은 계산기 같은 것의 역할을 하지 않겠어요? 그거 없으면 사람 사회 구성원으로 제대로 활동하기 어려울걸요."</p>
+          <cite>
+            — 이재명 대통령,
+            <a
+              class="inner-link"
+              href="https://www.youtube.com/watch?v=9M7Nrbggrew&amp;t=290s"
+              target="_blank"
+              rel="noopener"
+              >제22회 국무회의 겸 제9차 비상경제점검회의</a
+            >
+            (2026-05-20)
+          </cite>
+        </blockquote>
+        <p>AI를 <strong>기본 소양</strong>으로 보는 인식이 국가 최상위에서 확립되었습니다.</p>
+      </section>
+
+      <section class="frame frame--indigo">
+        <span class="kicker">02 · 국가</span>
+        <h2><a class="frame-link" href="/AI_Bridge/">세계 3대 AI 강국 — 행동계획이 굴러갑니다</a></h2>
+        <p>대통령 직속 <strong>국가인공지능전략위원회</strong>가 2025년 9월 「대한민국 인공지능 행동계획」을 의결했습니다. 비전은 단순합니다 — <em>세계 3대 인공지능 강국 도약</em>. 정책축은 셋입니다.</p>
+        <ul>
+          <li>인공지능 혁신 생태계 조성</li>
+          <li>범국가 인공지능 기반 대전환</li>
+          <li>국제 인공지능 기본사회 기여</li>
+        </ul>
+        <div class="bignum">
+          <span class="bignum-value">72<small>조 원</small></span>
+          <span class="bignum-caption">2026년 AI 분야 예산</span>
+        </div>
+        <p>AI 3강 도약에만 <strong>10조 원</strong>이 배정되었고, GPU 5만 장 확보가 인프라의 골자입니다.</p>
+      </section>
+
+      <section class="frame frame--cool">
+        <span class="kicker">03 · 교육 부문</span>
+        <h2><a class="frame-link" href="/AI_Bridge/">교과서에서 교육자료로 — 그러나 흐름은 멈추지 않았습니다</a></h2>
+        <p>2025년 초3·4학년과 중1·고1 영어·수학·정보 교과에 도입된 'AI 디지털 교과서'는, 1년 만에 <strong>법적 지위가 '교과서'에서 '교육자료'로 격하</strong>되고 명칭도 'AI 디지털 교육자료'로 바뀌었습니다.</p>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num">8.1<small>%</small></div>
+            <div class="stat-label">10일 이상 사용 학생</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">60<small>%</small></div>
+            <div class="stat-label">한 번도 접속하지 않은 학생</div>
+          </div>
+        </div>
+        <p>그러나 정부는 'AI 교육자료'로 위상을 재편하며 <strong>2026년 전 교원 AI 연수 계획</strong>은 그대로 유지했습니다.</p>
+      </section>
+
+      <section class="frame frame--wine">
+        <span class="kicker">04 · 교육과정</span>
+        <h2><a class="frame-link" href="/AI_Bridge/">기초소양이 바뀌었습니다 — '디지털 소양'의 합류</a></h2>
+        <p>2022 개정 교육과정은 기초소양을 다시 정의했습니다. 그동안의 '읽기·쓰기·셈하기'에서 <strong>'언어·수리·디지털 소양'</strong>으로 — 디지털 소양이 국어·수학과 같은 위치에 올라섰습니다.</p>
+        <div class="shift">
+          <div class="shift-pair">
+            <span class="shift-from">17<small>시간</small></span>
+            <span class="shift-arrow" aria-hidden="true">→</span>
+            <span class="shift-to">34<small>시간 이상</small></span>
+          </div>
+          <div class="shift-label">초등 정보교육 시수 (실과 + 학교자율시간)</div>
+        </div>
+        <ul>
+          <li>학교자율시간 권장 주제: 3학년 디지털 기초소양, <strong>6학년 인공지능</strong></li>
+          <li>모든 교과를 통한 디지털 기초소양 함양 명시</li>
+        </ul>
+        <p>교사가 가르쳐야 할 것이 제도적으로 바뀌었습니다.</p>
+      </section>
+
+      <section class="frame frame--terracotta">
+        <span class="kicker">05 · 지역</span>
+        <h2><a class="frame-link" href="/AI_Bridge/">당신의 교육청도 움직이고 있습니다 — GneGPT, 2026 초등 시범</a></h2>
+        <p>경상남도교육청(교육감 박종훈)이 'AI 디지털 교육 종합 추진 계획'을 수립했습니다. 핵심은 <strong>GneGPT</strong> — 전 교직원 업무 도움 자료 237개를 학습한 <em>교육청 자체 AI 시스템</em>입니다. 미래교육 플랫폼 '아이톡톡' 통합 인증으로 접근성을 확보했습니다.</p>
+        <p><strong>2026년부터 유치원·초등학교 시범 운영</strong>으로 시작해 점진적으로 확대해 갑니다. 교육정보원은 23억 원을 별도 투입해 학교 노후 유·무선망 개선, 5단계 스쿨넷, 테크센터 등 기반 인프라를 갖춥니다.</p>
+        <blockquote class="quote-end">
+          <p>"기술이 아무리 빠르게 변해도, 교육의 중심은 언제나 사람이어야 한다."</p>
+          <cite>— 박종훈 경남교육감</cite>
+        </blockquote>
+      </section>
+
+      <section class="frame frame--white">
+        <span class="kicker">06 · 질문</span>
+        <h2><a class="frame-link" href="/AI_Bridge/">그렇다면 — 교사 자신은 어디서 배우게 될까요</a></h2>
+        <p>대통령은 AI를 <em>계산기</em>에 비유합니다. 정부는 72조 원을 풉니다. 교육과정은 디지털을 기초소양으로 끌어올렸습니다. 경남교육청은 GneGPT를 초등으로 들여보냅니다.</p>
+        <p>그러나 그 변화의 한가운데에서, <strong>교사 학습의 경로는 산발적입니다</strong>. 프롬프트를 어떻게 쓰는지, 어떤 도구가 신뢰할 만한지, 학생과 함께 쓸 때 윤리적 경계는 어디인지 — 흩어진 자료를 모아 개인 시간을 쪼개며 자기 학습을 만들고 있습니다.</p>
+        <p class="emph">체계적이고, 무료이며, 교육과정에 연계된 학습 경로가 필요합니다.</p>
+      </section>
+
+      <section class="frame frame--teal">
+        <span class="kicker">07 · 응답</span>
+        <h2><a class="frame-link" href="/AI_Bridge/">Zero-Gap — 누구도 뒤처지지 않는 학습 경로</a></h2>
+        <p>이 빈자리를 채우려는 시도가 있습니다.</p>
+        <p><span class="brand">AI Bridge: Zero-Gap Toolkit</span> — 초등교사의 AI 학습을 위한 무료 웹 플랫폼입니다. LLM 기초, 프롬프트 엔지니어링, 수업 적용, 학교 업무 자동화, AI 윤리까지 <strong>5개 모듈 34개 차시</strong>와 <strong>19개의 AI 도구</strong>를 한 곳에. 2022 개정 교육과정 성취기준 연계, Gemini·Claude·ChatGPT·Codex 등 주요 생성형 AI를 안전하게 다루는 방법까지 담았습니다.</p>
+        <p>진입하면 <strong>간단한 진단</strong>이 당신에게 맞는 모듈부터 추천해 드립니다.</p>
+        <a class="cta-button" href="/AI_Bridge/">
+          AI Bridge 열기
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </section>
     </main>
+
+    <footer>
+      <p>이 페이지는 경상국립대학교 캡스톤 디자인 산출물의 일부로 제작되었습니다.</p>
+      <p>AI Bridge 자체는 무료로 공개·유지됩니다.</p>
+      <p>
+        <a href="https://jch4825.github.io/AI_Bridge/rss.xml">RSS</a>
+        ·
+        <a href="https://github.com/jch4825/AI_Bridge" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </footer>
   </body>
 </html>
